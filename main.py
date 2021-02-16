@@ -10,7 +10,7 @@ from datetime import datetime
 import random
 import itertools
 
-CUDA_VISIBLE_DEVICES='1'
+CUDA_VISIBLE_DEVICES='0'
 os.environ["CUDA_VISIBLE_DEVICES"] = CUDA_VISIBLE_DEVICES
 
 def seed_torch(seed=0):
@@ -35,7 +35,7 @@ batch_size_test = 1
 total_epoch = 50
 base_lr = 0.01
 lr_decay_epoch = 5
-dev = 'cuda:0' 
+dev = 'cpu'  # 'cuda:0'
 work_dir = './trained_models'
 log_file = os.path.join(work_dir,'log_test.txt')
 test_result_file = 'prediction_result.txt'
